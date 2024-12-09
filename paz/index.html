@@ -1,180 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta name="p:domain_verify" content="578b87a30776e07754df3ff434cc5f2f" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Título da página -->
-    <title>Clique aqui!</title>
-
-    <!-- Descrição da página -->
     <meta
       name="description"
-      content="Uma breve descrição do seu site ou página. Isso deve ser informativo e atrativo para os usuários."
+      content="Uma breve descrição do seu site ou página."
     />
-    <!-- -->
-    <!-- Palavras-chave relevantes -->
-    <meta
-      name="keywords"
-      content="palavra-chave 1, palavra-chave 2, palavra-chave 3"
-    />
-
-    <!-- Autor do conteúdo -->
-    <meta name="author" content="Seu Nome ou Nome da Empresa" />
-
-    <!-- Tags Open Graph para compartilhamento em redes sociais (opcional) -->
-    <meta
-      property="og:title"
-      content="Título para compartilhamento em redes sociais"
-    />
-    <meta
-      property="og:description"
-      content="Descrição para compartilhamento em redes sociais"
-    />
-    <meta
-      property="og:image"
-      content="URL da imagem para compartilhamento em redes sociais"
-    />
-    <meta property="og:url" content="URL da página" />
-
-    <!-- Tags Twitter Card para compartilhamento no Twitter (opcional) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Título para compartilhamento no Twitter"
-    />
-    <meta
-      name="twitter:description"
-      content="Descrição para compartilhamento no Twitter"
-    />
-    <meta
-      name="twitter:image"
-      content="URL da imagem para compartilhamento no Twitter"
-    />
-
-    <!-- CSS e outros recursos relacionados -->
-    <link rel="stylesheet" href="seu-estilo.css" />
-
-    <!-- Favicon (ícone da aba do navegador) -->
-    <link rel="icon" href="" />
-
-    <!-- Estilos CSS adicionais -->
+    <title>Clique aqui!</title>
     <style>
-      /* Estilizando o botão e adicionando animação */
-      button {
-        background-color: #4caf50;
-        /* Verde */
-        color: #000;
-        /* Preto */
-        padding: 20px 40px;
-        border: none;
-        border-radius: 10px;
-        /* Borda arredondada */
-        cursor: pointer;
-        font-family: "Comic Sans MS";
-        margin-bottom: 20px; /* Espaço abaixo do botão */
-        animation: blink 1s infinite; /* Animação de piscar */
-      }
-
-      @keyframes blink {
-        0%,
-        50%,
-        100% {
-          background-color: #4caf50; /* Cor original */
-        }
-        25%,
-        75% {
-          background-color: #008000; /* Cor alterada durante a animação */
-        }
-      }
-
-      /* Estilizando a seta */
-      .seta {
-        font-size: 24px;
-        margin-right: 10px;
-      }
-
-      /* Estilizando o texto dentro do botão */
-      .botao-texto {
-        font-size: 24px;
-      }
-
-      /* Estilizando as tags <p> e aplicando a fonte em toda a página */
-      p,
       body {
-        font-family: "Comic Sans MS";
-        font-size: 18px;
-        margin: 10px 0;
-        color: #333; /* Cor de texto cinza escuro */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff; /* Fundo branco */
+        color: #333; /* Texto cinza */
+        line-height: 1.6;
+        text-align: center;
       }
 
-      /* Estilizando a classe "flex" */
       .flex {
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Mover o conteúdo para o topo */
+        align-items: center;
         height: 100vh;
-        flex-direction: column; /* Alinhar o conteúdo na vertical */
+        flex-direction: column;
       }
 
-      /* Centralizando o botão horizontalmente */
-      .flex button {
-        align-self: center;
-      }
+      button {
+  background: linear-gradient(45deg, #000000, #003366); /* Gradiente de fundo */
+  color: #fff; /* Texto branco */
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: none; /* Remover o brilho do texto */
+  box-shadow: none; /* Remover o brilho ao redor do botão */
+  animation: pulse 1.0s infinite alternate; /* Animação de pulsar */
+}
 
-      /* Estilizando a classe "rodape" e ajustando a margem superior */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Tamanho original */
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.6); /* Brilho suave */
+  }
+  50% {
+    transform: scale(1.1); /* Expansão do botão */
+    box-shadow: 0 0 20px rgba(0, 191, 255, 1); /* Brilho mais intenso */
+  }
+  100% {
+    transform: scale(1); /* Retorno ao tamanho original */
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.6); /* Brilho suave */
+  }
+}
+
       .rodape {
-        text-align: center;
-        color: #333; /* Cor de texto cinza escuro */
-        margin-top: 10px; /* Espaço mais próximo do botão */
+        background: #f0f0f0; /* Fundo cinza claro */
+        padding: 20px;
+        color: #333; /* Texto cinza */
+        font-size: 14px;
       }
 
-      /* Estilizando os links no rodapé */
       .rodape a {
+        color: #000000; /* Links com cor azul */
         text-decoration: none;
-        color: #333; /* Cor de texto cinza escuro */
         margin: 0 5px;
+        text-shadow: 0 0 10px #f7fbfc;
       }
 
-      /* Estilizando a classe "disclaimer" e ajustando a cor do texto */
-      .disclaimer {
-        text-align: center;
-        font-size: 15px;
-        margin-bottom: 20px; /* Espaço abaixo do disclaimer */
-        color: #333; /* Cor de texto cinza escuro */
+      .disclaimer p {
+        font-size: 14px;
+        margin: 10px 0;
+        color: #666; /* Texto do disclaimer em cinza */
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        button {
+          padding: 15px 30px;
+          font-size: 18px;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- Botão verde no meio da página com seta -->
     <div class="flex">
-      <button onclick="window.location.href = '' ">
-        <span class="seta">»</span>
-        <span class="botao-texto">Clique Aqui 👈👈</span>
-      </button>
+      <button onclick="window.location.href = '' ">Clique Aqui 👈👈</button>
     </div>
     <div class="rodape">
       <div class="disclaimer">
         <p>
           Embora os resultados deste serviço tenham sido demonstrados e
-          confirmados pelos nossos clientes, é crucial ressaltar que os resultados
-          podem variar significativamente entre indivíduos, dependendo de
-          fatores pessoais. As informações fornecidas neste site têm o propósito
-          de oferecer conhecimento geral, sem garantir resultados específicos ou
-          um prazo exato para sua obtenção. Qualquer resultado obtido será de
-          total responsabilidade do cliente, e este produto/página não possui
-          qualquer afiliação com a Meta ADS.
+          confirmados pelos nossos clientes, é crucial ressaltar que os
+          resultados podem variar significativamente entre indivíduos,
+          dependendo de fatores pessoais.
+        </p>
+        <p>
+          As informações fornecidas neste site têm o propósito de oferecer
+          conhecimento geral, sem garantir resultados específicos ou um prazo
+          exato para sua obtenção. Qualquer resultado obtido será de total
+          responsabilidade do cliente, e este produto/página não possui qualquer
+          afiliação com a Meta ADS.
         </p>
       </div>
-      <a href="politicas.html" style="color: black">Política de Privacidade</a>
-      — <a href="termos.html" style="color: black">Termos de Uso</a> —
-      <a href="avisos.html" style="color: black">Aviso Legal</a>
-      <p style="color: #333">Atendimento através: contato@euvina-web.online</p>
-      <p style="color: #333">
-        CNPJ: 22.095.221/0001-23 // ©️ 2024 - Imobi Group
-
-      </p>
+      <a href="politicas.html"><strong>Política de Privacidade</strong></a> —
+      <a href="termos.html"><strong>Termos de Uso</strong></a> —
+      <a href="avisos.html"><strong>Aviso Legal</strong></a>
+      <p>Atendimento através: contato@euvina-web.online</p>
+      <p>CNPJ: 22.095.221/0001-23 // ©️ 2024 - Imobi Group</p>
       <p>Todos os direitos reservados</p>
     </div>
   </body>
